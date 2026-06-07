@@ -17,6 +17,14 @@ const Store = sequelize.define("Store", {
     },
     address: {
         type: DataTypes.STRING(400)
+    },
+    ownerId: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+            model: "Users",
+            key: "id"
+        }
     }
 }, {
     timestamps: true

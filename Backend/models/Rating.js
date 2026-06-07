@@ -15,8 +15,10 @@ const Rating = sequelize.define("Rating", {
             max: 5
         }
     }
+    
 }, {
     timestamps: true
 });
+
 
 module.exports = Rating;
